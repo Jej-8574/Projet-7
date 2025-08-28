@@ -2,18 +2,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 100px;
+  padding: 15px 72px;
 }
 
 .navbar__logo img {
+  margin-right: auto;
   height: 100px;
   width: auto;
 }
 
-
 .navbar__links {
   display: flex;
   gap: 57px;
+  padding-right: 22px;
 }
 
 .navbar__links a {
