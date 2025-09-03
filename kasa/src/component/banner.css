@@ -1,6 +1,5 @@
 .banner {
-  max-width: 89vw;
-  margin: 0 auto;
+  max-width: 100%;
   background: url("/banner.png") center / cover no-repeat;
   min-height: 200px;
   border-radius: 25px;
@@ -8,19 +7,5 @@
   display: grid;
   place-items: center;
   color: white;
+  margin-bottom: 2rem;
 }
-
-/* 
-.banner img {
-  position: absolute;
-  object-fit: cover;
-  filter: brightness(0.6);
-  z-index: 0;
-}
-
-.banner-text {
-  color: white;
-  font-size: 48px;
-  z-index: 1;
-  font-weight: 700;
-} */
