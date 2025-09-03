@@ -1,5 +1,8 @@
 .grid {
-    background-color: #F6F6F6;
-    min-height: 50vh;
-    border-radius: 25px;    
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
