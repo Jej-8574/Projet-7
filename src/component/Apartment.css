@@ -1,0 +1,9 @@
+.apartment-card {
+  background: #ff6060;
+  border-radius: 10px;
+  min-height: 200px;
+  padding: 1rem;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+}
