@@ -1,0 +1,11 @@
+.banner {
+  max-width: 100%;
+  background: url("/banner.png") center / cover no-repeat;
+  min-height: 200px;
+  border-radius: 25px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  color: white;
+  margin-bottom: 2rem;
+}

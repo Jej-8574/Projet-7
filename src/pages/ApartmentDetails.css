@@ -1,0 +1,63 @@
+/* Suppression de tout le CSS spécifique à la page appartement */
+
+.collapse {
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.collapse-btn {
+  width: 100%;
+  background: #ff6060;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  border: none;
+  border-radius: 10px;
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.collapse-btn:hover {
+  background: #ff7a7a;
+}
+
+.collapse-arrow {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.collapse-content {
+  background: #fff;
+  color: #ff6060;
+  font-size: 18px;
+  border-radius: 0 0 10px 10px;
+  padding: 20px 32px;
+  margin-top: -10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.apartment-details-content {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+  .apartment-details-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .collapse-btn {
+    font-size: 18px;
+    padding: 14px 18px;
+  }
+  .collapse-content {
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+}
