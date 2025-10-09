@@ -21,15 +21,15 @@ function Collapse({ title, children }) {
 }
 
 export default function ApartmentDetails() {
-  const { id } = useParams(); // Récupère l'ID depuis l'URL
+  const { id } = useParams();
   const [apartment, setApartment] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     fetch('/logements.json')
       .then(response => response.json())
       .then(data => {
-        // Trouve l'appartement avec l'ID correspondant
         const foundApartment = data.find(apt => apt.id === id);
         setApartment(foundApartment);
         setLoading(false);
@@ -39,6 +39,22 @@ export default function ApartmentDetails() {
         setLoading(false);
       });
   }, [id]);
+
+  const nextImage = () => {
+    if (apartment && apartment.pictures.length > 1) {
+      setCurrentImageIndex((prev) => 
+        prev === apartment.pictures.length - 1 ? 0 : prev + 1
+      );
+    }
+  };
+
+  const prevImage = () => {
+    if (apartment && apartment.pictures.length > 1) {
+      setCurrentImageIndex((prev) => 
+        prev === 0 ? apartment.pictures.length - 1 : prev - 1
+      );
+    }
+  };
 
   // Pendant le chargement
   if (loading) {
@@ -56,11 +72,30 @@ export default function ApartmentDetails() {
       <Content>
         <div className="apartment-details">
           <div className="apartment-gallery">
-            <img src={apartment.pictures[0]} alt={apartment.title} />
+            <div className="carousel-container">
+              <img 
+                src={apartment.pictures[currentImageIndex]} 
+                alt={`${apartment.title} - Image ${currentImageIndex + 1}`} 
+                className="carousel-image"
+              />
+              {apartment.pictures.length > 1 && (
+                <>
+                  <button className="carousel-btn carousel-btn-prev" onClick={prevImage}>
+                    &#8249;
+                  </button>
+                  <button className="carousel-btn carousel-btn-next" onClick={nextImage}>
+                    &#8250;
+                  </button>
+                  <div className="carousel-counter">
+                    {currentImageIndex + 1}/{apartment.pictures.length}
+                  </div>
+                </>
+              )}
+            </div>
           </div>
           <div className="apartment-header">
             <div className="apartment-main-info">
-              <h1 className="apartment-title">{apartment.title}</h1>
+              <h1 className="apartment-details-title">{apartment.title}</h1>
               <p className="apartment-location">{apartment.location}</p>
               <div className="apartment-tags">
                 {apartment.tags.map((tag, i) => (

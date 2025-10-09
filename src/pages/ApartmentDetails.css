@@ -1,4 +1,89 @@
-/* Suppression de tout le CSS spécifique à la page appartement */
+
+/* Styles pour le carrousel d'images */
+.apartment-gallery {
+  margin-bottom: 30px;
+}
+
+/* Container principal pour l'appartement */
+.apartment-details {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Titre et emplacement juste après le carrousel */
+.apartment-details-title {
+  color: #ff6060;
+  font-size: 36px;
+  font-weight: 500;
+  margin: 20px 0 10px 0;
+  line-height: 1.2;
+}
+
+.apartment-location {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 30px 0;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 415px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 100px;
+  color: white;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+  z-index: 2;
+  font-weight: bold;
+}
+
+.carousel-btn:hover {
+  opacity: 0.8;
+}
+
+.carousel-btn-prev {
+  left: 20px;
+}
+
+.carousel-btn-next {
+  right: 20px;
+}
+
+.carousel-counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
 
 .collapse {
   margin-bottom: 20px;
@@ -47,6 +132,127 @@
   margin-top: 30px;
 }
 
+/* Container pour aligner titre/tags et host/rating sur la même ligne */
+.apartment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+/* Styles pour l'hôte et les étoiles */
+.apartment-host-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.apartment-host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.host-name {
+  color: #ff6060;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.host-picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.apartment-rating {
+  display: flex;
+  gap: 10px;
+}
+
+.star {
+  font-size: 30px;
+  color: #e3e3e3;
+}
+
+.star.filled {
+  color: #ff6060;
+}
+
+/* Responsive pour tablettes et mobiles */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 255px;
+    border-radius: 10px;
+  }
+  
+  .carousel-btn {
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
+  }
+  
+  .carousel-btn-prev {
+    left: 15px;
+  }
+  
+  .carousel-btn-next {
+    right: 15px;
+  }
+  
+  .carousel-counter {
+    bottom: 15px;
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .apartment-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .apartment-host-rating {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .apartment-details-title {
+    font-size: 24px;
+  }
+
+  .apartment-location {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 3px 15px;
+  }
+
+  .apartment-details-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .collapse-btn {
+    font-size: 18px;
+    padding: 14px 18px;
+  }
+
+  .collapse-content {
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+}
+
 @media (max-width: 900px) {
   .apartment-details-content {
     flex-direction: column;
@@ -61,3 +267,39 @@
     padding: 14px 18px;
   }
 }
+
+
+/* Style pour les tags sous la localisation */
+.tag {
+  display: inline-block;
+  background: #ff6060;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 24px;
+  margin-right: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: background 0.2s;
+}
+.tag:last-child {
+  margin-right: 0;
+}
+
+/* Style pour les tags sous la localisation */
+.tag {
+  display: inline-block;
+  background: #ff6060;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  padding: 4px 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
