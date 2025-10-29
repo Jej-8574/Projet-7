@@ -184,31 +184,31 @@
   color: #ff6060;
 }
 
-/* Responsive pour tablettes et mobiles */
-@media (max-width: 768px) {
+/* Responsive pour mobiles */
+@media (max-width: 480px) {
   .carousel-container {
     height: 255px;
     border-radius: 10px;
   }
   
   .carousel-btn {
-    width: 80px;
-    height: 80px;
-    font-size: 80px;
+    width: 60px;
+    height: 60px;
+    font-size: 60px;
   }
   
   .carousel-btn-prev {
-    left: 15px;
+    left: 10px;
   }
   
   .carousel-btn-next {
-    right: 15px;
+    right: 10px;
   }
   
   .carousel-counter {
-    bottom: 15px;
-    font-size: 14px;
-    padding: 6px 12px;
+    bottom: 10px;
+    font-size: 12px;
+    padding: 4px 8px;
   }
 
   .apartment-header {
@@ -217,39 +217,66 @@
   }
 
   .apartment-host-rating {
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
 
+  .apartment-rating {
+    order: 1;
+    gap: 8px;
+  }
+
+  .apartment-host {
+    order: 2;
+    flex-direction: row-reverse;
+    gap: 12px;
+  }
+
+  .star {
+    font-size: 18px;
+  }
+
+  .host-name {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .host-picture {
+    width: 40px;
+    height: 40px;
+  }
+
   .apartment-details-title {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .apartment-location {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 15px;
   }
 
   .tag {
-    font-size: 12px;
-    padding: 3px 15px;
+    font-size: 10px;
+    padding: 2px 15px;
+    margin-right: 5px;
+    margin-bottom: 5px;
   }
 
   .apartment-details-content {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
   }
 
   .collapse-btn {
-    font-size: 18px;
-    padding: 14px 18px;
+    font-size: 16px;
+    padding: 12px 15px;
   }
 
   .collapse-content {
-    font-size: 16px;
-    padding: 14px 18px;
+    font-size: 14px;
+    padding: 12px 15px;
   }
 }
 
