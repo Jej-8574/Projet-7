@@ -7,3 +7,12 @@
     display: grid;
     place-items: center;
 }
+
+/* Responsive pour mobiles */
+@media (max-width: 480px) {
+  .footer {
+    min-height: 100px;
+    padding: 10px;
+    font-size: 14px;
+  }
+}

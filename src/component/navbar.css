@@ -26,3 +26,23 @@
 .navbar__links a:hover {
   text-decoration: underline;
 }
+
+/* Responsive pour mobiles */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  
+  .navbar__logo img {
+    height: 60px;
+  }
+  
+  .navbar__links {
+    gap: 15px;
+    padding-right: 0;
+  }
+  
+  .navbar__links a {
+    font-size: 16px;
+  }
+}

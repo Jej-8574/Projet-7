@@ -3,3 +3,17 @@ body {
   padding: 0;
   font-family: "Montserrat", sans-serif;
 }
+
+/* Conteneur principal responsive */
+.app-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 480px) {
+  .app-container {
+    padding: 0 10px;
+  }
+}

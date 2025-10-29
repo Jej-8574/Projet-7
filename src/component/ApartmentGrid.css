@@ -6,3 +6,13 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
+
+/* Responsive pour mobiles */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+  }
+}

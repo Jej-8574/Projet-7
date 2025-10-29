@@ -9,11 +9,11 @@ export default function ApartmentGrid() {
     fetch('/logements.json')
       .then(response => response.json())
       .then(data => {
-        console.log('Données récupérées:', data); // Pour voir les données dans la console
+       // Pour voir les données dans la console
         setApartments(data);
       })
       .catch(error => {
-        console.error('Erreur:', error);
+      
       });
   }, []);
 
