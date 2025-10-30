@@ -7,7 +7,8 @@
   gap: 2rem;
 }
 
-/* Responsive pour mobiles */
+/* Responsive pour mobile */
+
 @media (max-width: 480px) {
   .grid {
     grid-template-columns: 1fr;

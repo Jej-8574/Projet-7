@@ -4,16 +4,10 @@
     margin: 0 auto;
 }
 
-/* Responsive pour mobiles */
+/* Responsive pour mobile */
+
 @media (max-width: 480px) {
   .content {
-    padding: 1rem 0.8rem;
-  }
-}
-
-/* Pour les très petits écrans */
-@media (max-width: 320px) {
-  .content {
-    padding: 0.8rem 0.5rem;
+    padding: 1rem;
   }
 }

@@ -82,7 +82,8 @@
     }
 }
 
-/* Responsive mobile */
+/* Responsive pour mobile */
+
 @media (max-width: 480px) {
     .about-container {
         padding: 20px 15px 40px 15px;

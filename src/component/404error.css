@@ -33,7 +33,8 @@
     display: inline-block;
 }
 
-/* Responsive pour mobiles */
+/* Responsive pour mobile */
+
 @media (max-width: 480px) {
   .container {
     margin-top: 30px;

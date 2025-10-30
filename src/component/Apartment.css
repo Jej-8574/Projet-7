@@ -28,7 +28,8 @@
   border-radius: 5px;
 }
 
-/* Responsive pour mobiles */
+/* Responsive pour mobile */
+
 @media (max-width: 480px) {
   .apartment-card {
     min-height: 220px;

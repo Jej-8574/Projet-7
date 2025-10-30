@@ -27,7 +27,8 @@
   text-decoration: underline;
 }
 
-/* Responsive pour mobiles */
+/* Responsive pour mobile */
+
 @media (max-width: 480px) {
   .navbar {
     padding: 15px 20px;
