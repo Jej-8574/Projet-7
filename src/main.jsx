@@ -28,7 +28,9 @@ const router = createBrowserRouter([
     path: "*",
     element: <Error404 />,
   },
-]);
+], {
+  basename: "/Projet-7"
+});
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
