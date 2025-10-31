@@ -2,6 +2,7 @@ import Navbar from "./navbar";
 import Footer from "./Footer";
 import "./about.css";
 import { useState } from "react";
+import bannerAbout from "../assets/banner-about.png.jpg";
 
 const dropdowns = [
   {
@@ -38,7 +39,7 @@ function About() {
       <Navbar />
 
       <img
-        src="/banner-about.png.jpg"
+        src={bannerAbout}
         alt="Montagnes"
         className="about-banner"
       />

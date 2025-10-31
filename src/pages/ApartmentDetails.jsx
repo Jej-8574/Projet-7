@@ -27,7 +27,7 @@ export default function ApartmentDetails() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
-    fetch('/logements.json')
+    fetch('/Projet-7/logements.json')
       .then(response => response.json())
       .then(data => {
         const foundApartment = data.find(apt => apt.id === id);

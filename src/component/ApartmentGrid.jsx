@@ -6,14 +6,13 @@ export default function ApartmentGrid() {
   const [apartments, setApartments] = useState([]);
 
   useEffect(() => {
-    fetch('/logements.json')
+    fetch('/Projet-7/logements.json')
       .then(response => response.json())
       .then(data => {
-       // Pour voir les données dans la console
         setApartments(data);
       })
       .catch(error => {
-      
+        console.error('Erreur:', error);
       });
   }, []);
 
