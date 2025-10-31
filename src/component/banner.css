@@ -1,6 +1,6 @@
 .banner {
   max-width: 100%;
-  background: url("/banner.png") center / cover no-repeat;
+  background: url("public/banner.png") center / cover no-repeat;
   min-height: 200px;
   border-radius: 25px;
   overflow: hidden;
